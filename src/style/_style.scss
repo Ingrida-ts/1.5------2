@@ -1,0 +1,149 @@
+* {
+   margin: 0;
+   padding: 0;
+   font-family: TT Lakes;
+   font-size: 16px;
+   font-weight: normal;
+   line-height: 24px;
+   text-align: left;
+   letter-spacing: -0.2px;
+ color:$text_button;
+   background: $back;
+}
+.swiper {
+    min-width: 100%;
+    height: auto;
+    width: auto;
+  }
+.swiper-slide { 
+    width: auto;
+}
+.swiper-pagination-bullet-active{
+    background: $text_button;
+}
+
+a {
+    text-decoration: none;
+}
+
+.h2{
+    padding: 16px;
+    background: linear-gradient(90deg, $back 1.39%, $wight 100%); 
+}
+
+.brands__item{
+    list-style-type: none;
+    width: 240px;
+    height: 72px;
+    margin-bottom: 16px;
+}
+
+.brands__list{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px; 
+    margin-bottom:24px;
+    white-space: nowrap;
+    gap: 5px; 
+}
+
+.link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $wight;
+    border: 1px solid $border;
+    border-radius: 6px;
+    padding: 0px 16px;
+    height: 72px;
+    width: 206px;
+
+    &:hover{
+        border-color:$pink;
+        box-shadow:  0 0 4px 4px $shadow;
+    }
+}
+
+
+.link__image{
+    background: $wight; 
+}
+
+.link__button{
+    padding:12px 14px;
+    background:$wight;
+    border-radius: 50%;
+    border: 2px solid $pink;
+}
+
+.arrows-link{
+    display: none;
+}
+
+@media (min-width:768px) {
+    .brands__item{
+        min-width: 224px;
+    }
+
+    .brands__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+        column-gap: 24px;
+        grid-template-rows: 1fr 1fr;
+        grid-auto-rows: 0;
+        overflow-y: hidden;
+        gap: 0px;
+
+        &--expand{
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-auto-rows: auto;
+        }
+    }
+
+    .arrows-link{
+        display: block;
+        color:$text;
+        padding: 4px 4px 4px 30px;
+        margin-left: 32px;
+        position:relative;
+        border: transparent;
+        border-radius: 6px;
+
+        &:hover{
+            border: 1px solid $border_h1;
+        }
+
+        &--reverse {
+            &::before {
+              transform: rotate(180deg);
+            }
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 4px;
+            left: 0;
+            background: url(img/icon.svg) 50% no-repeat;
+            transition: all 0.5s ease-in-out;
+    
+           
+        }
+    }
+ }
+
+@media (min-width:1120px){
+    .brands__item{
+        min-width: 240px;
+    }
+
+    .brands__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-items: center;
+        column-gap: 24px;
+    }
+}
