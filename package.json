@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": {
-    "url": "https://github.com/Ingrida-ts/1.5"
+    "url": " https://ingrida-ts.github.io/1.5------2/"
   },
   "scripts": {
     "start": "webpack serve",
